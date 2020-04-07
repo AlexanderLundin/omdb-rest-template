@@ -14,6 +14,7 @@ public class SearchResults {
     boolean response;
 
     public SearchResults() {
+        System.out.println("Constructor");
     }
 
     public List<Result> getSearch() {
@@ -41,7 +42,7 @@ public class SearchResults {
     }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    class Result {
+    static class Result {
         /*
        {
                "Title": "Birds of a Feather",
