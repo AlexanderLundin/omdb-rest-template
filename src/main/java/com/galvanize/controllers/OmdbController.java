@@ -14,7 +14,7 @@ public class OmdbController {
     private static String OMDB_KEY = "apikey=ae3a01f2";
     private static String BASE_URL = "http://www.omdbapi.com/?" + OMDB_KEY;
     private static String SEARCH_BASE = BASE_URL + "&type=movie&plot=full&s=";
-    private static String IMDBID_BASE = BASE_URL + "&plot=full&1=";
+    private static String IMDBID_BASE = BASE_URL + "&plot=full&i=";
 
     public OmdbController(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
