@@ -3,16 +3,18 @@ package com.galvanize.model;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.xml.transform.Result;
 import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class SearchResults {
 
-    @JsonProperty("search")
+    @JsonProperty("Search")
     private List<Result> search;
     private int totalResults;
     boolean response;
+
+    public SearchResults() {
+    }
 
     public List<Result> getSearch() {
         return search;
@@ -39,7 +41,7 @@ public class SearchResults {
     }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    class result {
+    class Result {
         /*
        {
                "Title": "Birds of a Feather",
@@ -59,6 +61,9 @@ public class SearchResults {
         private String type;
         @JsonProperty("Poster")
         private String poster;
+
+        public Result() {
+        }
 
         public String getTitle() {
             return title;
